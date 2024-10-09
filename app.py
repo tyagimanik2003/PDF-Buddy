@@ -25,6 +25,7 @@ if authentication_status == True:
     # authenticator.logout("logout","main")
     @st.cache_data
     def add_bg_from_local(image_file):
+        print("Do you think this is a change")
         with open(image_file, "rb") as image_file:
             encoded_string = base64.b64encode(image_file.read())
         st.markdown(
@@ -42,6 +43,7 @@ if authentication_status == True:
         )
 
     def ocr_pdf(file):
+        print("Something is going on")
         pages = convert_from_bytes(file.read(), 500, poppler_path=r"C:\Program Files\poppler-23.07.0\Library\bin")
         text = ""
         for page in pages:
