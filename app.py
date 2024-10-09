@@ -42,6 +42,7 @@ if authentication_status == True:
         )
 
     def ocr_pdf(file):
+        print("Something is going on.")
         pages = convert_from_bytes(file.read(), 500, poppler_path=r"C:\Program Files\poppler-23.07.0\Library\bin")
         text = ""
         for page in pages:
